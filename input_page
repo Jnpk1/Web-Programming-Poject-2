@@ -1,0 +1,15 @@
+# Web-Programming-Project-2
+<html>
+  <head>
+    <title>Hangman</title>
+  </head>
+  <body>
+  Type in your guess:<br> 
+    <?php
+    <form action="insert_file_here" method="post">
+    <input type="text" name="input" maxlength="1" size="4"><br> 
+    <input type="Submit">
+
+     ?> 
+  </body>
+</html>
