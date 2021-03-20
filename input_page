@@ -4,11 +4,21 @@
     <title>Hangman</title>
   </head>
   <body>
-  Type in your guess:<br> 
+ <h1>Welcome to Hangman!</h1>
  
-    <form action="insert_file_here" method="post">
-    <input type="text" name="input" maxlength="1" size="4"><br> 
+  <form action="insert_file_here" method="post">
+   <label for="difficulty"><b>Select Difficulty:</b></label>
+  <select id= "difficulty" name="difficulty" size="1">
+    <option value="easy">Easy</option>
+    <option value="medium">Medium</option>
+    <option value="hard">Hard</option>
+    <option value="impossible">Impossible</option>
+  </select><br><br>
+  <p><b>Rules: </b>Select your difficulty and submit. Afterwards, you will have to guess each letter of the word until it is correct.<br>
+     Each incorrect input will draw a part of the Hangman. Once the full figure of the Hangman is drawn<br>
+	 (six incorrect guesses) the game is over. You will also receive a clue for each word. Good luck!</p>
     <input type="Submit">
+  </form>
 
  
   </body>
