@@ -1,0 +1,10 @@
+Cardamom;Type of spice
+Biryani;Type of dish
+Kwashiorkor;Medical condition
+Podiatrist;Type of doctor
+Junket;Type of dessert
+Bayou;Type of landscape
+Squdgy;Something pudgy,squat
+Kickshaw;Another word for a fancy dish
+Squush;To squish something
+Xylophone;Musical Instrument
