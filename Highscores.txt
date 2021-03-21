@@ -1,0 +1,12 @@
+Master;None;0
+Master;None;0
+Master;None;0
+Hard;None;0
+Hard;None;0
+Hard;None;0
+Medium;None;0
+Medium;None;0
+Medium;None;0
+Easy;None;0
+Easy;None;0
+Easy;None;0
