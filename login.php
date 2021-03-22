@@ -39,23 +39,39 @@
 <?php session_start();
   /* Check Login form submitted */
   if (isset($_POST['Submit'])) {
-      /* Define username and associated password array */
-      $logins = array('Alex' => '123456','username1' => 'password1','username2' => 'password2');
 
       /* Check and assign submitted Username and Password to new variable */
       $Username = isset($_POST['Username']) ? $_POST['Username'] : '';
       $Password = isset($_POST['Password']) ? $_POST['Password'] : '';
+      $User = false;
+      if(!empty($Username) && !empty($Password)) {
+        $file_handle = fopen("Logins.txt", "r+");
+        while (($line = fgets($file_handle)) != false) {
+          $parts = explode(";", $line);
+          if(trim($parts[0]) === $Username && trim($parts[1]) === $Password) {
+            $User = true;
+            fclose($file_handle);
+            break;
+          }
+        }
 
-      /* Check Username and Password existence in defined array */
-      if (isset($logins[$Username]) && $logins[$Username] == $Password) {
-          /* Success: Set session variables and redirect to Protected page  */
-          $_SESSION['UserData']['Username']=$logins[$Username];
-          header("location:index.php");
-          exit;
+        /* Check Username and Password existence in defined array */
+        if ($User == true) {
+            /* Success: Set session variables and redirect to Protected page  */
+            $_SESSION['UserData']['Username']= $Username;
+
+            header("location:index.php");
+            exit;
+        } else {
+            /*Unsuccessful attempt: Set error message */
+            $msg="<span style='color:red'>Invalid Login Details</span> <a href='signup.php'>Sign-UP</a>";
+            echo $msg;
+        }
       } else {
-          /*Unsuccessful attempt: Set error message */
-          $msg="<span style='color:red'>Invalid Login Details</span>";
-          echo $msg;
+        $msg="<span style='color:red'>Empty Username/Password</span>";
+        echo $msg;
       }
+
+
   }
 ?>
