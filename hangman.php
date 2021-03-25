@@ -10,6 +10,7 @@
 <p>
 
 <?php
+//Round Setup
 $file = file_get_contents('badhangman.txt');
 $infoArr = explode(',',$file);
 $gameboard = $infoArr[0];
@@ -19,34 +20,40 @@ $score = $infoArr[3];
 $lives = $infoArr[4];
 
 if(isset($_POST['submit1']) && $_POST['guess'] != ""){
+
+$wordBroke = str_split($word);
+$boardBroke = str_split($gameboard);
+$got = false;
+for($i = 0; $i < count($wordBroke);$i++){
+if($wordBroke[$i] == $_POST['guess']){
+$got = True;
+$boardBroke[$i] = $wordBroke[$i];
+}
+}
+if($got == false){
+$guesses .= "|".$_POST['guess'];
+if($lives-1 == 0){
+header('Location:prepare.php');
+}
+else{
 $lives = $lives - 1;
+}
+}
+$gameboard = implode("",$boardBroke);
 $newInfo = $gameboard.",".$word.",".$guesses.",".$score.",".$lives;
 file_put_contents('badhangman.txt',$newInfo);
 }
 
 
 
-//Round Setup
+
 
 echo "<p>".$gameboard." ".$word." ".$guesses." ".$score." ".$lives."</p>";
 
 
-
-//$file = file_get_contents('hard.txt');
-//$allwords = explode(PHP_EOL, $file);
-//$wordcount = sizeof($allwords);
-//$chosen = $allwords[rand(0,($wordcount - 2))];
-
-//$sep = explode(',',$chosen);
-//$word = $sep[0];
-//$hint = $sep[1];
-//$wordarr = str_split($word);
-//$blankarr = $wordarr;
-//for($i = 0; $i < sizeof($wordarr);$i++){
-//$blankarr[$i] = '_';
-//}
-
 echo "<br>";
+
+
 
 if(isset($_POST['submit1']) && $_POST['guess'] == ""){
 echo "<p>You didn't give me a letter >:(</p>";
