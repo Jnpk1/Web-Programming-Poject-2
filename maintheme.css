@@ -38,3 +38,23 @@ color: darkred;
 a.link{
 color: lightblue;
 }
+
+input[type="submit"] {
+	background-color: #FAA;
+	font-size: 80%;
+	font-weight: bold;
+}
+.sub{
+	text-align:center
+}
+#guess{
+	text-shadow: 2px 2px 5px red;
+	
+}
+.response{
+	text-align:center;
+}
+#post_page{
+	padding-top: 50px;
+	text-align:center;
+}
