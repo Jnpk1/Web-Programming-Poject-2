@@ -22,7 +22,9 @@ font-family:courier;
 font-size: 22;
 font-weight: bold;
 }
-
+h1{
+	color: red;
+}
 h3{
 text-align: center;
 }
