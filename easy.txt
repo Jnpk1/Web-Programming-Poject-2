@@ -1,11 +1,11 @@
-Ham;Comes from a pig.
-Jam;Spread over toast.
-Fam;Slang for family.
-Arm;Body part.
-Fan;Cools you down.
-Pie;Baked Goods.
-Hat;Wear on top of your head.
-Red;Color.
-Cat;Pet.
-Dog;Pet.
-Tea;Beverage.
+ham,Comes from a pig.
+jam,Spread over toast.
+fam,Slang for family.
+arm,Body part.
+fan,Cools you down.
+pie,Baked Goods.
+hat,Wear on top of your head.
+red,Color.
+cat,Pet.
+dog,Pet.
+tea,Beverage.

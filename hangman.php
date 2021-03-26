@@ -28,6 +28,9 @@ for($i = 0; $i < count($wordBroke);$i++){
 if($wordBroke[$i] == $_POST['guess']){
 $got = True;
 $boardBroke[$i] = $wordBroke[$i];
+if(implode("",$boardBroke) == implode("",$wordBroke)){
+header('Location:prepare.php');
+}
 }
 }
 if($got == false){

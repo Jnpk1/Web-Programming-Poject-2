@@ -1,10 +1,10 @@
-Pastry;Baked Goods
-Hijack;steal
-Muzzle;Pet mouth guard
-Bone;Part of body
-Spades;Card game
-Spare;Excess amount
-Park;Outdoor Recreation
-Book;Contains fact or fiction
-Subway;Makes sandwiches
-Sand;At the beach
+pastry,Baked Goods
+hijack,To steal
+muzzle,Pet mouth guard
+bone,Part of body
+spades,Card game
+spare,Excess amount
+park,Outdoor Recreation
+book,Contains fact or fiction
+subway,Makes sandwiches
+sand,At the beach
