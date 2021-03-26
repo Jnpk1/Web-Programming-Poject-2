@@ -6,7 +6,7 @@
   </head>
   <body>
 
-    <form action="" method="post" name="Login_Form">
+    <form action="prepare.php" method="post" name="Login_Form">
     <table width="400" border="0" align="center" cellpadding="5" cellspacing="1" class="Table">
     <?php if (isset($msg)) {?>
     <tr>
