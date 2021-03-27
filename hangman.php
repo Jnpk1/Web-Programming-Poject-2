@@ -70,7 +70,8 @@ echo "<p>Your letter is: ".$_POST['guess']."</p>";
 </p>
 
 <form method="post">
-Guess:
+  <div class="sub">
+<p id="guess">Enter in your guess below:</p>
 <input type="text" name="guess" size="6" maxlength="1" />
 <input type="submit" name="submit1" value="Submit1"/>
 </form>
@@ -78,7 +79,7 @@ Guess:
 <br>
 <br>
 <p> Sup guys </p>
-
+</div>
 </div>
 
 </main>
