@@ -1,4 +1,4 @@
-Flippant,Disrespectful attitude.
+flippant,Disrespectful attitude.
 waltz,Type of dance.
 oxygen,Element.
 jaundice,Medical Condition.

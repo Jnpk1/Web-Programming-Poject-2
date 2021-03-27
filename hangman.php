@@ -19,27 +19,32 @@ $guesses = $infoArr[2];
 $score = $infoArr[3];
 $lives = $infoArr[4];
 
-if (isset($_POST['submit1']) && $_POST['guess'] != "") {
-    $wordBroke = str_split($word);
-    $boardBroke = str_split($gameboard);
-    $got = false;
-    for ($i = 0; $i < count($wordBroke);$i++) {
-        if ($wordBroke[$i] == $_POST['guess']) {
-            $got = true;
-            $boardBroke[$i] = $wordBroke[$i];
-        }
-    }
-    if ($got == false) {
-        $guesses .= "|".$_POST['guess'];
-        if ($lives-1 == 0) {
-            header('Location:prepare.php');
-        } else {
-            $lives = $lives - 1;
-        }
-    }
-    $gameboard = implode("", $boardBroke);
-    $newInfo = $gameboard.",".$word.",".$guesses.",".$score.",".$lives;
-    file_put_contents('badhangman.txt', $newInfo);
+if(isset($_POST['submit1']) && $_POST['guess'] != ""){
+
+$wordBroke = str_split($word);
+$boardBroke = str_split($gameboard);
+$got = false;
+for($i = 0; $i < count($wordBroke);$i++){
+if($wordBroke[$i] == $_POST['guess']){
+$got = True;
+$boardBroke[$i] = $wordBroke[$i];
+if(implode("",$boardBroke) == implode("",$wordBroke)){
+header('Location:prepare.php');
+}
+}
+}
+if($got == false){
+$guesses .= "|".$_POST['guess'];
+if($lives-1 == 0){
+header('Location:prepare.php');
+}
+else{
+$lives = $lives - 1;
+}
+}
+$gameboard = implode("",$boardBroke);
+$newInfo = $gameboard.",".$word.",".$guesses.",".$score.",".$lives;
+file_put_contents('badhangman.txt',$newInfo);
 }
 
 

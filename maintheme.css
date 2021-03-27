@@ -25,7 +25,9 @@ font-family:courier;
 font-size: 22;
 font-weight: bold;
 }
-
+h1{
+	color: red;
+}
 h3{
 text-align: center;
 }
@@ -42,6 +44,26 @@ a.link{
 color: lightblue;
 }
 
+
 form {
   padding: 30px 0px;
+}
+input[type="submit"] {
+	background-color: #FAA;
+	font-size: 80%;
+	font-weight: bold;
+}
+.sub{
+	text-align:center
+}
+#guess{
+	text-shadow: 2px 2px 5px red;
+	
+}
+.response{
+	text-align:center;
+}
+#post_page{
+	padding-top: 50px;
+	text-align:center;
 }

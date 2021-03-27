@@ -1,10 +1,10 @@
-Cardamom,Type of spice
-Biryani,Type of dish
-Kwashiorkor,Medical condition
-Podiatrist,Type of doctor
-Junket,Type of dessert
-Bayou,Type of landscape
-Squdgy,Something pudgy;squat
-Kickshaw,Another word for a fancy dish
-Squush,To squish something
-Xylophone,Musical Instrument
+cardamom,Type of spice
+biryani,Type of dish
+kwashiorkor,Medical condition
+podiatrist,Type of doctor
+junket,Type of dessert
+bayou,Type of landscape
+squdgy,Something pudgy,squat
+kickshaw,Another word for a fancy dish
+squush,To squish something
+xylophone,Musical Instrument
