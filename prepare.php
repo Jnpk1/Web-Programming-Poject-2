@@ -41,7 +41,8 @@ header('Location:hangman.php');
 }
 ?>
 
-
+<div id="post_page">
+  <h1>Select your difficulty:</h1>
 <form method="post">
 <select name="difficulty">
 <option value="easy">Easy</option>
@@ -51,7 +52,7 @@ header('Location:hangman.php');
 </select>
 <input type="submit" name="submit1" value="Submit1"/>
 </form>
-
+</div>
 <br>
 <br>
 
