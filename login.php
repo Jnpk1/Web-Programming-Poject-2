@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="maintheme.css">
   </head>
   <body>
 
@@ -14,14 +15,14 @@
     </tr>
     <?php } ?>
     <tr>
-      <td colspan="2" align="left" valign="top"><h3>Login</h3></td>
+      <td style="color:white;" colspan="2" align="left" valign="top"><h3>Login</h3></td>
     </tr>
     <tr>
-      <td align="right" valign="top">Username</td>
+      <td style="color:white;" align="right" valign="top">Username</td>
       <td><input name="Username" type="text" class="Input"></td>
     </tr>
     <tr>
-      <td align="right">Password</td>
+      <td style="color:white;" align="right">Password</td>
       <td><input name="Password" type="password" class="Input"></td>
     </tr>
     <tr>
