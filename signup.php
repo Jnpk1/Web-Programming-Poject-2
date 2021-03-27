@@ -1,41 +1,3 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title> bonk </title>
-    <link rel="stylesheet" href="maintheme.css">
-  </head>
-  <body>
-
-    <form action="" method="post" name="Login_Form">
-    <table width="400" border="0" align="center" cellpadding="5" cellspacing="1" class="Table">
-    <?php if (isset($msg)) {?>
-    <tr>
-      <td colspan="2" align="center" valign="top"><?php echo $msg; ?></td>
-    </tr>
-    <?php } ?>
-    <tr>
-      <td colspan="2" align="left" valign="top"><h3>Sign-Up</h3></td>
-    </tr>
-    <tr>
-      <td align="right" valign="top">Username</td>
-      <td><input name="Username" type="text" class="Input"></td>
-    </tr>
-    <tr>
-      <td align="right">Password</td>
-      <td><input name="Password" type="password" class="Input"></td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td><input name="Submit" type="submit" value="Login" class="Button3"></td>
-    </tr>
-  </table>
-</form>
-
-  </body>
-</html>
-
-
 <!-- Starts the session -->
 <?php session_start();
   /* Check Login form submitted */
@@ -67,18 +29,56 @@
           //username not already taken, add username;password to end of file, send to login page
           if (!$Existing) {
               $file = "Logins.txt";
-              file_put_contents($file, $Username.";".$Password, FILE_APPEND);
+              file_put_contents($file, $Username.";".$Password.PHP_EOL, FILE_APPEND);
               header("location:login.php");
               exit;
           } else {
               /*Unsuccessful attempt: Set error message */
               $msg="<span style='color:red'>Username Already Taken</span>";
-              echo $msg;
           }
       } else {
           $msg="<span style='color:red'>Invalid Username/Password</span>";
-          echo $msg;
       }
   }
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> bonk </title>
+    <link rel="stylesheet" href="maintheme.css">
+  </head>
+  <body>
+
+  <div id="righttext">
+      <form action="" method="post" name="Login_Form">
+      <table width="400" border="0" align="center" cellpadding="5" cellspacing="1" class="Table">
+      <tr>
+        <td colspan="2" align="left" valign="top"><h3>Sign-Up</h3></td>
+      </tr>
+      <tr>
+        <td align="right" valign="top">Username</td>
+        <td><input name="Username" type="text" class="Input"></td>
+      </tr>
+      <tr>
+        <td align="right">Password</td>
+        <td><input name="Password" type="password" class="Input"></td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td><input name="Submit" type="submit" value="Login" class="Button3"></td>
+      </tr>
+    </table>
+    </form>
+
+    <?php
+    echo isset($msg) ? $msg: '';
+     ?>
+    <br>
+    <br>
+  </div>
+
+  </body>
+</html>
