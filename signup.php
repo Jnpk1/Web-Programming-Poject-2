@@ -2,7 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title> bonk </title>
+    <link rel="stylesheet" href="maintheme.css">
   </head>
   <body>
 

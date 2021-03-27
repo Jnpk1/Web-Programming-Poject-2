@@ -1,14 +1,16 @@
 <html>
-<head>
-<link rel="stylesheet" href="maintheme.css">
-</head>
-<title> bonk </title>
+  <head>
+    <title> bonk </title>
+    <link rel="stylesheet" href="maintheme.css">
+  </head>
+
 <body>
 
 <main>
 
 <div id="righttext">
 <?php
+
 if(isset($_POST['submit1'])){
 //Setup
 $file = file_get_contents('easy.txt');

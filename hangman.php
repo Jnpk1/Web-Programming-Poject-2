@@ -12,7 +12,7 @@
 <?php
 //Round Setup
 $file = file_get_contents('badhangman.txt');
-$infoArr = explode(',',$file);
+$infoArr = explode(',', $file);
 $gameboard = $infoArr[0];
 $word = $infoArr[1];
 $guesses = $infoArr[2];
@@ -58,11 +58,10 @@ echo "<br>";
 
 
 
-if(isset($_POST['submit1']) && $_POST['guess'] == ""){
-echo "<p>You didn't give me a letter >:(</p>";
-}
-else{
-echo "<p>Your letter is: ".$_POST['guess']."</p>";
+if (isset($_POST['submit1']) && $_POST['guess'] == "") {
+    echo "<p>You didn't give me a letter >:(</p>";
+} else {
+    echo "<p>Your letter is: ".$_POST['guess']."</p>";
 }
 
 
@@ -85,4 +84,5 @@ echo "<p>Your letter is: ".$_POST['guess']."</p>";
 </main>
 
 </body>
+
 </html>                                                                                                                       
